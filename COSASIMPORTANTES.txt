@@ -1,0 +1,22 @@
+BACKEND
+
+pip install flask mysql-connector-python
+
+pip install flask-cors
+
+python run.py
+
+FRONTEND
+
+npx create-react-app .
+
+npm install axios react-router-dom
+
+{
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+  }
+}
+
+npm start
+

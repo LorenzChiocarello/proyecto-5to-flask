@@ -1,0 +1,22 @@
+CREATE DATABASE Escuela;
+USE Escuela;
+
+CREATE TABLE Cursos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    curso VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE Estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    fechanacimiento DATE NOT NULL,
+    idcurso INT,
+    FOREIGN KEY (idcurso) REFERENCES Cursos(id)
+);
+
+INSERT INTO Cursos (curso) VALUES ('1A');
+INSERT INTO Cursos (curso) VALUES ('2A');
+INSERT INTO Cursos (curso) VALUES ('3B');
+
+INSERT INTO Estudiantes (nombre, apellido, fechanacimiento, idcurso) VALUES ('Federico', 'Lopez', '2020/04/07', 2)
